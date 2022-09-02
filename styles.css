@@ -9,5 +9,15 @@
 .board div {
     height: 20px;
     width: 20px;
+}
+
+.player-one {
+    background-color: red;
+    /* its gonna paint the square red but with the border radius o 10px is gonna look like a circle */
+    border-radius: 10px;
+}
+
+.player-two {
     background-color: blue;
+    border-radius: 10px;
 }
