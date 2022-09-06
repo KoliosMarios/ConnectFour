@@ -77,6 +77,7 @@ const winningArrays = [
   [7, 14, 21, 28],
   [8, 15, 22, 29],
   [9, 16, 23, 30],
+  [16, 23, 30, 37],
   [10, 17, 24, 31],
   [11, 18, 25, 32],
   [12, 19, 26, 33],
@@ -88,7 +89,7 @@ function checkBoard() {
   for (let i = 0; i < winningArrays.length; i++) {
     // most confusing part
     // f.e. when i = 0 then squares1 = squares[winningArrays[0][0]] which is squares[0] and so forth
-    // so we populate the consts square1, square2 etc with the indexes inside the winning arrays
+    // so we populate the variables square1, square2 etc with the indexes inside the winning arrays
     const square1 = squares[winningArrays[i][0]];
     const square2 = squares[winningArrays[i][1]];
     const square3 = squares[winningArrays[i][2]];
