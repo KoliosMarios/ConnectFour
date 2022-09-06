@@ -7,11 +7,19 @@ const result = document.querySelector("#result");
 // pick out the current player display
 const displayCurrentPlayer = document.querySelector("#current-player");
 
+//pick out the scores display
+const displayPlayerOneScore = document.querySelector("#player-one-score");
+const displayPlayerTwoScore = document.querySelector("#player-two-score");
+
 // current player variable to display
 let currentPlayer = 1;
 
+// variables to display scores
+let playerOneScore = 0;
+let playerTwoScore = 0;
+
 // game winning arrays
-const winningArrays = [
+let winningArrays = [
   [0, 1, 2, 3],
   [1, 2, 3, 4],
   [2, 3, 4, 5],
@@ -103,6 +111,8 @@ function checkBoard() {
       square4.classList.contains("player-one")
     ) {
       result.innerHTML = "Player One Wins!";
+      playerOneScore += 1;
+      displayPlayerOneScore.innerHTML = playerOneScore;
       winningArrays.splice(i,1);
     }
     // same for player two
@@ -113,6 +123,8 @@ function checkBoard() {
       square4.classList.contains("player-two")
     ) {
       result.innerHTML = "Player Two Wins!";
+      playerTwoScore += 1;
+      displayPlayerTwoScore.innerHTML = playerTwoScore;
       winningArrays.splice(i,1);
     }
   }
